@@ -1,14 +1,10 @@
 import { useEffect, useReducer } from "react";
-import { todoReducer } from "../08-useReducer/todoReducer";
+import { todoReducer } from "./todoReducer";
 
 const init = () => {
-    try {
       return JSON.parse(localStorage.getItem('todos')) || [];
-    } catch (error) {
-      console.error('Error parsing todos from localStorage:', error);
-      return []; // Devuelve un arreglo vacío si ocurre un error.
-    }
-  };
+    
+  }
 
 
 
